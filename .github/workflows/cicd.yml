@@ -28,4 +28,4 @@ jobs:
           docker stop frontend || true
           docker rm frontend || true
       - name: Run Docker container
-        run: docker run -d -p 4200:80 --name frontend ${{ secrets.DOCKER_USERNAME }}/healthcare-frontend:latest
+        run: docker run -d -p 80:80 --name frontend ${{ secrets.DOCKER_USERNAME }}/healthcare-frontend:latest
